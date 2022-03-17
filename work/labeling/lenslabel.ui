@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1332</width>
+    <height>990</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="imagebox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>900</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 32pt &quot;Agency FB&quot;;
+background-color: rgb(52, 52, 52);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>No image</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dir_select">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>310</y>
+      <width>111</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 183, 74);
+font: 14pt &quot;Agency FB&quot;;
+border-radius: 15px</string>
+    </property>
+    <property name="text">
+     <string>Select
+Directory</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="dir_list">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>430</y>
+      <width>421</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">selection-background-color:rgb(255, 0, 0);</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="dragDropOverwriteMode">
+     <bool>true</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SingleSelection</enum>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QTableWidget" name="label_name">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>31</y>
+      <width>311</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">selection-background-color:rgb(255, 0, 0);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>false</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SingleSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectItems</enum>
+    </property>
+    <property name="sortingEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="columnCount">
+     <number>1</number>
+    </property>
+    <column/>
+   </widget>
+   <widget class="QLabel" name="label_list">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>0</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 179, 92);
+font: 75 14pt &quot;Agency FB&quot;;</string>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string>Label</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_label">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>70</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(18, 102, 241);
+font: 48pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);
+border-radius: 15px</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="subtraction_label">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>140</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(249, 49, 84);
+font: 48pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);
+border-radius: 15px</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_list_2">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>350</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 179, 92);
+font: 75 14pt &quot;Agency FB&quot;;</string>
+    </property>
+    <property name="text">
+     <string>File List</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTableView" name="label_name_2">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>30</y>
+      <width>111</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="add_label_name">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>30</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(230, 230, 230);
+font: 75 14pt &quot;Agency FB&quot;;
+border-radius: 10px</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Agency FB'; font-size:14pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Gulim'; font-size:9pt; font-weight:400;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_count_lb">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>380</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Agency FB&quot;;
+background-color: rgb(255, 136, 17);</string>
+    </property>
+    <property name="text">
+     <string>File Count</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_count">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>380</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Agency FB&quot;;
+background-color: rgb(200, 200, 200);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_count_lb_2">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>380</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Agency FB&quot;;
+background-color: rgb(255, 136, 17);</string>
+    </property>
+    <property name="text">
+     <string>Labeled</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_count_2">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>380</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Agency FB&quot;;
+background-color: rgb(200, 200, 200);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_count_3">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>380</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Agency FB&quot;;
+background-color: rgb(200, 200, 200);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_count_lb_3">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>380</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Agency FB&quot;;
+background-color: rgb(255, 136, 17);</string>
+    </property>
+    <property name="text">
+     <string>Not
+Labeled</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="movefile">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>900</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 75 14pt &quot;Agency FB&quot;;
+background-color: rgb(178, 60, 253);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Move File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="repair_keyevent">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>900</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>10</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 75 10pt &quot;Agency FB&quot;;
+background-color: rgb(178, 60, 253);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>숫자로 라벨링이 
+안될때 클릭</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="move_progress">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>910</y>
+      <width>271</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: orange;</string>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>900</y>
+      <width>371</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Agency FB&quot;;
+background-color: rgb(39, 39, 39);</string>
+    </property>
+    <property name="text">
+     <string>숫자 1~9 - 각 행에 맞는 라벨링 
+A - 이전이미지 / D - 다음이미지 / P - 파일 이동</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+   </widget>
+   <zorder>imagebox</zorder>
+   <zorder>repair_keyevent</zorder>
+   <zorder>label_name</zorder>
+   <zorder>label_name_2</zorder>
+   <zorder>dir_select</zorder>
+   <zorder>dir_list</zorder>
+   <zorder>label_list</zorder>
+   <zorder>add_label</zorder>
+   <zorder>subtraction_label</zorder>
+   <zorder>label_list_2</zorder>
+   <zorder>add_label_name</zorder>
+   <zorder>file_count_lb</zorder>
+   <zorder>file_count</zorder>
+   <zorder>file_count_lb_2</zorder>
+   <zorder>file_count_2</zorder>
+   <zorder>file_count_3</zorder>
+   <zorder>file_count_lb_3</zorder>
+   <zorder>movefile</zorder>
+   <zorder>move_progress</zorder>
+   <zorder>label_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1332</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
